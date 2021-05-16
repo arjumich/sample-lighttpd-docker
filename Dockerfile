@@ -8,6 +8,7 @@ COPY start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
 
 RUN chown -R lighttpduser:lighttpduser /var/log/php7/ && chmod -R 777 /var/log/php7/
+EXPOSE 8080
 
 USER lighttpduser
 
