@@ -8,7 +8,7 @@ docker build -t klovercloud/lighttpd:latest .
 ```
 **Run**
 ```sh
-sudo docker run --rm -t --read-only --name test-lighttpd --tmpfs=/tmp -v /home/arjun/Docker-vol/lighttpd-vol/php-log:/var/log/php7 -v /home/arjun/random_stuff/lighttpd-docker:/var/www/localhost/htdocs -v /home/arjun/Docker-vol/lighttpd-vol/config:/etc/lighttpd -p 8080:8080 klovercloud/lighttpd:latest
+sudo docker run --rm -t --read-only --name test-lighttpd --tmpfs=/tmp -v /home/arjun/Docker-vol/lighttpd-vol/php-log:/var/log/php7 -v /home/arjun/Docker-vol/lighttpd-vol/serve:/var/www/localhost/htdocs -v /home/arjun/Docker-vol/lighttpd-vol/config:/etc/lighttpd -p 8080:8080 klovercloud/lighttpd:latest
 ```
 ### Notes
 - changed default /run/lighttpd.pid file location to /tmp/lighttpd.pid
